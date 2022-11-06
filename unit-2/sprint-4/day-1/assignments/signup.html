@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>MASAI</h1>
+   <h3>SignUp</h3>
+   <p>Full name</p>
+   <input id="name" type="text">
+   <p>Email</p>
+   <input id="email" type="text">
+   <p>Password</p>
+   <input id="pass" type="text">
+   <br>
+   <br>
+   <button onclick="right()">Sign Up</button>
+</body>
+</html>
+
+<script>
+
+function right(){
+
+let nameEr=document.getElementById("name").value
+let emailEr=document.getElementById("email").value
+let passEr=document.getElementById("pass").value
+
+let p=localStorage.setItem("nameEr:",nameEr);
+let q=localStorage.setItem("emailEr:",emailEr);
+let r=localStorage.setItem("passEr:",passEr);
+
+if(localStorage.getItem("nameEr")!=null && localStorage.getItem("emailEr")!=null && localStorage.getItem("passEr")!=null){
+   document.querySelector("h3").innerText="Log-In";
+// console.log(document.querySelector("h3").innerText)
+if(nameEr!=localStorage.getItem("nameEr") || emailEr!=localStorage.getItem("emailEr") || passEr!=localStorage.getItem("passEr")){
+alert("Wrong data entered")
+}
+else{
+ 
+    alert("login successfull")
+}
+}
+
+else{
+
+ 
+
+alert("details successfully entered")
+
+}
+
+}
+</script>

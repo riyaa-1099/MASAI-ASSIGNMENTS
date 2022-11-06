@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+ <input id="firstNum" type="number" placeholder="first number">
+ <input id="secondNum" type="number" placeholder="second number">
+ <br>
+ <br>
+ <button onClick="add()">Add</button>
+ <button onClick="sub()">Subtract</button>
+ <button onClick="mul()">Multiply</button>
+ <button onClick="div()">Divide</button>
+ 
+</body>
+</html>
+
+<script>
+function add(){
+let p=document.getElementById("firstNum").value;
+let q=document.getElementById("secondNum").value;
+let bag=Number(p)+Number(q);
+alert(bag);
+}
+function sub(){
+    let p=document.getElementById("firstNum").value;
+let q=document.getElementById("secondNum").value;
+let bag=Number(p)-Number(q);
+alert(bag);
+    
+}
+function mul(){
+    let p=document.getElementById("firstNum").value;
+let q=document.getElementById("secondNum").value;
+let bag=Number(p)*Number(q);
+alert(bag);  
+}
+function div(){
+    let p=document.getElementById("firstNum").value;
+let q=document.getElementById("secondNum").value;
+let bag=Number(p)/Number(q);
+alert(bag);   
+}
+
+
+</script>

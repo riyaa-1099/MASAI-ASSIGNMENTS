@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#key{
+    display: grid;
+    grid-template-columns:repeat(3,60px) ;
+    grid-template-rows:repeat(4,50px) ;
+    gap: 20px;
+    justify-content:center ;
+    text-align: center;
+    
+}
+#key>div{
+    background-color: green;
+    font-weight: bold;
+    padding: 12px;
+}
+#mid{
+display: grid;
+justify-content: center;
+text-align: center;
+}
+#up{
+    display: grid;
+    grid-template-columns: repeat(2,70px);
+    height: 50px;
+    gap: 90px;
+    justify-content: center;
+}
+#up>div{
+    background-color: rgb(209, 106, 106);
+    text-align: center;
+    font-weight: bold;
+    width: 120px;
+    height: 60px;
+}
+
+#enter{
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+
+}
+#display{
+    background-color: gray;
+    width: 150px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+   <div id="up">
+    <div id="min">
+       <div id="chanMin">43</div>
+        <div>MIN</div>
+    </div>
+    <div id="max">
+        <div id="chanMax">2019</div>
+         <div>MAX</div>
+     </div>
+   </div> 
+<div id="mid">
+   <h3>SCORE</h3>
+   <div id="display"></div>
+<div id="key">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>0</div>
+</div>
+<div id="enter">ENTER</div>
+</div>
+
+</body>
+</html>
+<script>
+let keys= document.querySelectorAll("#key>div");
+keys.forEach(function(el) {
+    el.addEventListener("click",myfun);
+    
+});
+let bag="";
+function myfun(event){
+   
+let targetNum= event.target.innerText; 
+bag = bag+targetNum;
+document.querySelector("#display").innerText =bag;
+}
+document.querySelector("#enter").addEventListener("click",mainfun)
+
+function mainfun(event){
+let min= document.querySelector("#chanMin").innerText;
+let max= document.querySelector("#chanMax").innerText;
+if(Number(min)>Number(bag)){
+    document.querySelector("#chanMin").innerText=bag;
+}
+else if(Number(max)<Number(bag)){
+    document.querySelector("#chanMax").innerText=bag;
+}
+document.querySelector("#display").innerText ="";
+}
+</script>

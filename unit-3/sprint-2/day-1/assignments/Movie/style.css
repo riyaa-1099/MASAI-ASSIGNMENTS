@@ -1,0 +1,111 @@
+
+#carousel img{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  width: 70%;
+  padding: 20px;
+  
+}
+#carousel{
+    padding: 80px;
+}
+#movies{
+    display: grid;
+    grid-template-columns:repeat(3,1fr) ;
+    text-align: center;
+    margin: 10px;
+    padding-top: 50px;
+}
+#poster{
+    width: 60%;
+    
+}
+#menu{
+    margin-left: 28px;
+}
+body{
+    margin: 0px;
+}
+#menu div {
+  width: 25px;
+  height: 4px;
+  background-color: rgb(108, 104, 104);
+  margin: 3px 0;
+}
+#mainnav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #192133;
+position: fixed;
+
+
+}
+#nav1, #nav2{
+    display: flex;
+    margin: 9px;
+}
+.logo{
+    width: 20%;
+}
+#kids{
+    color: orangered;
+}
+
+#nav1>*{
+    padding: 1px 10px;
+    vertical-align: center;
+    color: rgb(227, 224, 224);
+    padding-top: 10px;
+}
+#nav1>img{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+#search{
+    background-color: #192133;
+    color: rgb(227, 224, 224);
+    border: none;
+    font-size: 20px;
+}
+
+.open-button{
+    background-color: #192133;
+    color: rgb(227, 224, 224);
+    margin-right: 40px;
+
+}
+
+#nav2 .button{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding-top: 0px;
+    margin: 10px 12px;
+    
+}
+
+
+
+#search~div{
+    color:aliceblue;
+ padding-top: 13px;
+ padding-right: 8px;
+}
+.form-container {
+ width: 300px;
+ height: 300px;
+padding: 30px;
+  background-color: #141c2b;
+
+
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  right: 30%;
+  text-align: left;
+ 
+}

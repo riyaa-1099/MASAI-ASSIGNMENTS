@@ -1,0 +1,11 @@
+#container {
+  width: 30%;
+  margin: auto;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 20px;
+  width: 400px;
+}

@@ -1,0 +1,11 @@
+#cont{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
+}
+#up{
+    display: flex;
+    justify-content: space-between;
+}

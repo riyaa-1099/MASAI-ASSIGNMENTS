@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Calculator</title>
+    <style>
+h1{color: rgb(0,128,128);
+text-align: center;
+font-size: 46px;
+margin-bottom :65px; ;
+}
+h1+div{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    width: 21%;
+    margin: auto;
+    padding: 40px;  
+}
+#main{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius:7px ;
+    margin: auto;
+    width: 90%; 
+    height: 65px;
+    margin-bottom: 20px;
+}
+#main~div{
+    display: flex;
+    justify-content: center;
+    
+}
+#main~div>div{
+  margin: 7px 5px;
+  padding: 20px 25px; 
+  border-radius: 7px;
+  font-weight: bold;
+  box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px ;
+}
+#main~div :nth-child(4){
+    background-color: black;
+    color: white;
+}
+.c{
+    background-color: red;
+    color: white;
+}
+.eql{
+   background-color: black;
+   color: white;
+}
+
+
+    </style>
+</head>
+<body>
+   <h1>Masai Calculator</h1>
+   <div>
+<div id="main"></div>
+<div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>+</div>
+</div>
+<div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>-</div>
+</div>
+<div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>*</div>
+</div>
+<div>
+    <div class="c">C</div>
+    <div>0</div>
+    <div class="eql">=</div>
+    <div>/</div>
+</div>
+
+   </div> 
+</body>
+</html>
+<script>
+
+let keys = document.querySelectorAll("#main~div>div");
+let bag="";
+keys.forEach(function(el){
+    el.addEventListener("click",myCal);
+});
+function myCal(event){
+    let targetNumber = event.target.innerText;
+if(targetNumber =="C"){
+    bag="";
+    document.querySelector("#main").innerText="";
+}
+else if(targetNumber=="="){
+    document.querySelector("#main").innerText=eval(bag);
+}
+else{
+bag = bag+targetNumber
+document.querySelector("#main").innerText = bag;
+}
+
+}
+
+</script>

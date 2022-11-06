@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Throw Dice App</title>
+    <style>
+        #container div, button{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            padding: 5px; 
+            height: 60px;
+            
+           
+        }
+        #container div input{
+            width: 100px;
+            border: none;
+            text-align: center;
+            justify-content: center;
+           
+            font-size: 20px;
+        }
+        #winner{
+            font-size: 30px;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <div id="winner"></div>
+
+        <div>
+          <input id="member-a"/>
+        </div>
+        <div>
+          <input id="member-b" />
+        </div>
+        <div>
+            <input id="member-c" />
+          </div>
+
+        <button id="roll">ROLL THE DICE</button>
+    </section>
+    <script src="./src/throwDice.js" ></script>
+</body>
+</html>

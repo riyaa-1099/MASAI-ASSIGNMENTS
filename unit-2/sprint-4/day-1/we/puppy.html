@@ -1,0 +1,96 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puppy</title>
+<style>
+    img{
+width: 400px;
+    }
+</style>
+
+</head>
+ <body>
+    <img src="https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445" alt="">
+    <div>
+    <h1>Likes count: <span></span></h1>
+    <h2>Dislikes Count: <span></span></h2>
+    <div>
+    <button onClick="likeFun()">Like</button>
+    <button onClick="dislikeFun()">Dislike</button>
+    </div>
+ </body>
+</html>
+
+<script>
+let likeCount=localStorage.getItem("likes") || 0 ;
+document.querySelector("h1>span").innerText = likeCount;
+let dislikeCount=localStorage.getItem("dislikes")||0;
+document.querySelector("h2>span").innerText = dislikeCount;
+
+function likeFun(){
+likeCount++;
+document.querySelector("h1>span").innerText=likeCount;
+localStorage.setItem("likes",likeCount)
+
+}
+
+function dislikeFun(){
+dislikeCount++;
+document.querySelector("h2>span").innerText = dislikeCount;
+localStorage.setItem("dislikes", dislikeCount)
+
+}
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puppy</title>
+<style>
+    img{
+width: 400px;
+    }
+</style>
+
+</head>
+ <body>
+    <img src="https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445" alt="">
+    <div>
+    <h1>Likes count: <span></span></h1>
+    <h2>Dislikes Count: <span></span></h2>
+    <div>
+    <button onClick="likeFun()">Like</button>
+    <button onClick="dislikeFun()">Dislike</button>
+    </div>
+ </body>
+</html>
+
+<script>
+let likeCount=localStorage.getItem("likes") || 0 ;
+document.querySelector("h1>span").innerText = likeCount;
+let dislikeCount=localStorage.getItem("dislikes")||0;
+document.querySelector("h2>span").innerText = dislikeCount;
+
+function likeFun(){
+likeCount++;
+document.querySelector("h1>span").innerText=likeCount;
+localStorage.setItem("likes",likeCount)
+
+}
+
+function dislikeFun(){
+dislikeCount++;
+document.querySelector("h2>span").innerText = dislikeCount;
+localStorage.setItem("dislikes", dislikeCount)
+
+}
+
+>>>>>>> e15b2a3e488058d4b3f5faf800454f0800d8bdbc
+</script>
